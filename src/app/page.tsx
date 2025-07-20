@@ -9,8 +9,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 z-10 text-center">
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/20 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
-              <span className="text-white text-3xl font-bold">LHĐ</span>
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/20">
+              <Image
+                src="/avatar.jpg"
+                alt="Lê Hồng Đức"
+                width={128}
+                height={128}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
               Xin chào, tôi là <span className="text-purple-400">Lê Hồng Đức</span>
@@ -51,7 +58,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="bg-white/10 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-white mb-2">Giáo dục</h4>
-                <p className="text-gray-300">Kỹ sư công nghệ thôn tin - Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn(2019-2024)</p>
+                <p className="text-gray-300">Kỹ sư công nghệ thôn tin - Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn (2019-2024)</p>
               </div>
               <div className="bg-white/10 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-white mb-2">Kinh nghiệm</h4>
@@ -158,7 +165,7 @@ export default function Home() {
       <section className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-white text-center mb-16">Kỹ năng kỹ thuật</h2>
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold text-white mb-6">Backend</h3>
               <div className="space-y-4">
@@ -266,7 +273,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Docker</span>
+                    <span className="text-gray-300">Redis</span>
                     <span className="text-purple-400">80%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
@@ -275,13 +282,102 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="text-gray-300">Redis</span>
+                    <span className="text-gray-300">Firebase</span>
                     <span className="text-purple-400">75%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div className="bg-purple-600 h-2 rounded-full" style={{ width: '75%' }}></div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold text-white mb-6">DevOps & Tools</h3>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300">Docker</span>
+                    <span className="text-purple-400">85%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-purple-600 h-2 rounded-full" style={{ width: '85%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300">Git</span>
+                    <span className="text-purple-400">90%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-purple-600 h-2 rounded-full" style={{ width: '90%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300">Jira</span>
+                    <span className="text-purple-400">80%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-purple-600 h-2 rounded-full" style={{ width: '80%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300">IntelliJ IDEA</span>
+                    <span className="text-purple-400">85%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-purple-600 h-2 rounded-full" style={{ width: '85%' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Skills */}
+          <div className="max-w-6xl mx-auto mt-12">
+            <h3 className="text-3xl font-bold text-white text-center mb-8">Kỹ năng bổ sung</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-white mb-4">AI & Realtime</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">OpenAI</span>
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">Web Speech API</span>
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">Socket.IO</span>
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">Kafka</span>
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">LLM</span>
+                </div>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-white mb-4">DevOps & Cloud</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">Webhook</span>
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">S3 Bucket</span>
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">Liquibase</span>
+                  <span className="bg-purple-600 px-3 py-1 rounded-full text-sm text-white">Bitbucket</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div className="max-w-4xl mx-auto mt-12">
+            <h3 className="text-3xl font-bold text-white text-center mb-8">Chứng chỉ</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white/10 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-white text-2xl font-bold">PSM</span>
+                </div>
+                <h4 className="text-xl font-semibold text-white mb-2">Professional Scrum Master I</h4>
+                <p className="text-gray-300">2024</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-white text-2xl font-bold">PSM</span>
+                </div>
+                <h4 className="text-xl font-semibold text-white mb-2">Professional Scrum Master II</h4>
+                <p className="text-gray-300">2024</p>
               </div>
             </div>
           </div>
