@@ -2,11 +2,16 @@
 const nextConfig = {
   // Ensure proper image optimization
   images: {
-    domains: ['media.licdn.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     unoptimized: false,
   },
-  // Output configuration for Vercel
-  output: 'standalone',
   // Ensure proper TypeScript handling
   typescript: {
     ignoreBuildErrors: false,
